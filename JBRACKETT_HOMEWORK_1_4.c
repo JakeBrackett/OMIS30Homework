@@ -1,0 +1,31 @@
+//
+//  JBRACKETT_HOMEWORK_1_4.c
+//  OMIS30
+//
+//  Created by Jacob Brackett on 10/5/14.
+//  Copyright (c) 2014 Jacob Brackett. All rights reserved.
+//
+
+#include <stdio.h>
+#include <math.h>
+int main(void){
+    printf("Please enter your first and last initials: ");
+    char first, last;
+    scanf("%c%c", &first, &last);
+    printf("Hello %c%c, welcome to the change calcualtor. Answer the following questions so that the calcualtor can let you know how much your change is worth!", first, last);
+    int half_dollars, quarters, nickels, dimes, pennies;
+    printf("How many half dollars do you have?: ");
+    scanf("%d", &half_dollars);
+    printf("How many quarters do you have?: ");
+    scanf("%d", &quarters);
+    printf("How many dimes do you have?: ");
+    scanf("%d", &dimes);
+    printf("How many nickels do you have?: ");
+    scanf("%d", &nickels);
+    printf("How many pennies do you have?: ");
+    scanf("%d", &pennies);
+    double change = (half_dollars*.5)+(quarters*.25)+(nickels*.05)+(dimes*.1)+(pennies*.01);
+    double rounded_change = roundf(change * 100) / 100;
+    printf("You have $%lf worth of change", rounded_change);
+    return 0;
+}
