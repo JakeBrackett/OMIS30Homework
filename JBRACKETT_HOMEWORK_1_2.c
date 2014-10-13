@@ -12,6 +12,6 @@ int main(void){
     int a,b,c;
     scanf("%d %d %d", &a, &b, &c);
     double avg = (double)(a+b+c)/3;
-    printf("The average of %d, %d, and %d is %f", a,b,c,avg);
+    printf("The average of %d, %d, and %d is %f\n", a,b,c,avg);
     return 0;
 }

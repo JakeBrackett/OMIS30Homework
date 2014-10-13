@@ -7,12 +7,11 @@
 //
 
 #include <stdio.h>
-#include <math.h>
 int main(void){
     printf("Please enter your first and last initials: ");
     char first, last;
     scanf("%c%c", &first, &last);
-    printf("Hello %c%c, welcome to the change calcualtor. Answer the following questions so that the calcualtor can let you know how much your change is worth!", first, last);
+    printf("\nHello %c%c, welcome to the change calcualtor. Answer the following questions so that the calcualtor can let you know how much your change is worth!\n\n", first, last);
     int half_dollars, quarters, nickels, dimes, pennies;
     printf("How many half dollars do you have?: ");
     scanf("%d", &half_dollars);
@@ -25,7 +24,6 @@ int main(void){
     printf("How many pennies do you have?: ");
     scanf("%d", &pennies);
     double change = (half_dollars*.5)+(quarters*.25)+(nickels*.05)+(dimes*.1)+(pennies*.01);
-    double rounded_change = roundf(change * 100) / 100;
-    printf("You have $%lf worth of change", rounded_change);
+    printf("\nYou have $%lf worth of change\n", change);
     return 0;
 }
